@@ -1,0 +1,9 @@
+CHIP Dec16 {
+  IN in[16];
+  OUT out[16];
+
+  PARTS:
+  Not16(in[0]=true, out=complementOne);
+  Add16(a=komp1, b[0]=true, out=minusOne);
+  Add16(a=in, b=minusOne, out=out);
+}
